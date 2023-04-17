@@ -11,9 +11,10 @@ import AboutEvent from "./screens/AboutEvent";
 import FloorMap from "./screens/FloorMap";
 import PhotoGellery from './screens/PhotoGellery';
 import SponsorList from './screens/SponsorList';
-import SurveyContest from "./screens/SurveyContest";
+import ServeyContext from "./screens/SurveyContest";
 import ContactUs from "./screens/ContactUs";
-
+import NewsUpdate from "./screens/NewsUpdate";
+import EventSchedule from "./screens/EventSchedule";
 
 
 const Drawer = createDrawerNavigator();
@@ -22,8 +23,6 @@ const App = () => {
   return (
     <NavigationContainer>
       <Navigation/>
-     
-
     </NavigationContainer>
   );
 };
