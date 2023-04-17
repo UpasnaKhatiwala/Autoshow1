@@ -175,6 +175,8 @@ const SponsorList = () => {
       </View>
       <View style={styles.rowContainer}>{Media_sponsors}</View>
 
+
+      <Text style={styles.headingText}>Thank you to our sponsors!</Text>
     </View>
 
     </ScrollView>

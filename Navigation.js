@@ -14,20 +14,21 @@ import ContactUs from "./screens/ContactUs";
 import NewsUpdate from "./screens/NewsUpdate";
 import EventSchedule from "./screens/EventSchedule";
 
+
 const Stack = createStackNavigator();
 
 const Navigation = () => {
   return (
     <Stack.Navigator>
     
-     
-      <Stack.Screen name="Splash" component={Splash} />
-      <Stack.Screen name="OnBoarding" component={OnBoarding} />
-      <Stack.Screen name="AutoShow" component={AutoShow} />
-      <Stack.Screen name="AboutEvent" component={AboutEvent} />
-      <Stack.Screen name="EventSchedule" component={EventSchedule} />
+    
+    <Stack.Screen name="NewsUpdate" component={NewsUpdate} />
+    <Stack.Screen name="AboutEvent" component={AboutEvent} /> 
+    <Stack.Screen name="AutoShow" component={AutoShow} />
+    <Stack.Screen name="OnBoarding" component={OnBoarding} />
+    <Stack.Screen name="Splash" component={Splash} />
+    <Stack.Screen name="EventSchedule" component={EventSchedule} />
       <Stack.Screen name="FloorMap" component={FloorMap} />
-     <Stack.Screen name="NewsUpdate" component={NewsUpdate} />
       <Stack.Screen name="PhotoGellery" component={PhotoGellery} />
       <Stack.Screen name="SponsorList" component={SponsorList} />
       <Stack.Screen name="ServeyContext" component={ServeyContext} />
