@@ -1,76 +1,103 @@
-import { View,Text, ScrollView,  Image, StyleSheet,Button,TextInput} from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image, FlatList, ScrollView } from 'react-native';
+import React, {PureComponent} from 'react';
 
-import React,{useState} from 'react';
+export default class NewsUpdate extends PureComponent {
+    
+    render() {
+        let {container, date,cardpara, cardText, card, cardImage, Details} = style
+    return (
 
-const img = require('../assets/map.png');
+        <View style={container}>
 
-
-
-export default function NewsUpdate () {
-
-    const[activity,setActivity] = useState([
-
-        {name:"N Parking Lot- Electric Avenue & Main Stage:", name2: "44.413050, -79.667212", key:1},
-        {name:"E/H Parking Lot- Pfaff Track:", name2: "44.412537, -79.667248", key:2},
-        {name:"D Parking Lot- Manufacturer Tents:", name2: "44.412238, -79.666182", key:3},
-        {name:"Kids Zone:", name2: "44.413783, -79.667570", key:4},
-        {name:"EV Test Drive:", name2: "44.11033, -79.667215", key:5},
-        {name:"A Parking Lot- Show ‘n Shine:", name2: "44.410596, -79.667666", key:6}
-
-    ]);
-
-    const styles = StyleSheet.create({
-        container: {
-            flex: 1,
-            backgroundColor: '#fff',
-            padding:20
-        },
-        
-        image: {
-          width: '100%',
-          height: 300,
-          resizeMode:'contain'
-        },
-        headingText: {
-            fontSize: 24,
-            fontWeight: 'bold',
-            textAlign: 'center',
-            padding:0,
-            color:'#004B87'
-          },
-          item:{
-            fontSize:15,
-            backgroundColor:'white',
-            borderWidth: 1,
-            borderColor: 'black',
-            borderRadius: 5,
-            marginTop:20,
-            padding:20,
-            width: '100%',
-            fontWeight: 'bold'
-          }
-      });
-
-    return(
-        
-        <View style={styles.container}>
-            
-                <ScrollView>
-                <Image style={styles.image} source={img} />
-                <Text style={styles.headingText}>Parking lot and Coordinates</Text>
-            
-                { activity.map((item)=>{
-                       return(
-                        <View key={item.key}>
-                            <Text style={styles.item}>{item.name}{item.name2}</Text>
-                        </View>
-                       ) 
-                    })
-                }
-                </ScrollView>
-                
+            <ScrollView>
+            <TouchableOpacity style={card}>
+                <Text style={date}>June 22,2022,  11:20AM</Text>
+                <Text style={cardText}>Announcement</Text>
+                <Text style={cardpara}>Attention!</Text>
+                <Text style={cardpara}>The Location is Changed for Tomorrow`s event!</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={card}>
+                <Text style={date}>June 22,2022,  11:20AM</Text>
+                <Text style={cardText}>News</Text>
+                <Text style={cardpara}>Head-up!</Text>
+                <Text style={cardpara}>Check on some today's event update here!</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={card}>
+                <Text style={date}>June 22,2022,  11:20AM</Text>
+                <Text style={cardText}>Announcement</Text>
+                <Text style={cardpara}>Today's event is starting in minutes!</Text>
+                <Text style={cardpara}>Check the schedule for whole day.</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={card}>
+                <Text style={date}>June 22,2022,  11:20AM</Text>
+                <Text style={cardText}>News</Text>
+                <Text style={cardpara}>Head-up!</Text>
+                <Text style={cardpara}>Check on some today's event update here!</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={card}>
+                <Text style={date}>June 22,2022,  11:20AM</Text>
+                <Text style={cardText}>Announcement</Text>
+                <Text style={cardpara}>Attention!</Text>
+                <Text style={cardpara}>The Location is changed for Tommorow's event!</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={card}>
+                <Text style={date}>June 22,2022,  11:20AM</Text>
+                <Text style={cardText}>News</Text>
+                <Text style={cardpara}>Head-up!</Text>
+                <Text style={cardpara}>Check on some today's event update here!</Text>
+            </TouchableOpacity>
+            </ScrollView>
             
         </View>
-        
+       
     )
 }
+}
+
+const style = StyleSheet.create({
+    container: {
+       marginTop: 40
+       
+    
+    },
+    cardText: {
+        fontSize: 17
+       
+    },
+    cardpara: {
+        fontSize: 10
+    },
+    cardImage: {
+        width: '50%',
+        height: 100,
+        position: 'absolute', top: 0, right: 0, zIndex: 1,
+        
+    },
+    Details: {
+        fontSize: 9,
+        marginLeft: 300,
+        color: 'grey'
+
+    },
+    date: {
+        fontSize: 14,
+        color: 'grey'
+
+    },
+    
+    card: {
+        backgroundColor: '#fff',
+        marginBottom: 10,
+        marginLeft: '2%',
+        width: '96%',
+        shadowColor: '#000',
+        shadowOpacity: 1,
+        shadowOffset: {
+            width: 3,
+            height: 3
+        },
+        padding: 20
+    },
+   
+
+})
